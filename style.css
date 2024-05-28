@@ -1,0 +1,144 @@
+@media (max-width:2000px){
+    html[data-theme='light']{
+        height: 100%;
+        box-sizing: border-box;
+        --bg: linear-gradient(320deg,#FFC0CB,rgb(67, 69, 159),rgb(136, 221, 255));
+        --bgcal: rgba(255, 255, 255, 0.8);
+        --color-text: #000;
+        --color-text-hover: #fff
+    }
+
+    html[data-theme='dark']{
+        height: 100%;
+        --bg: linear-gradient(320deg,#482f33,rgb(48, 49, 76),rgb(62, 89, 99));
+        --bgcal: rgba(35, 72, 78, 0.8);
+        --color-text: #fff;
+        --color-text-hover: #000
+    }
+
+    *,*::before,*::after{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        background: var(--bg);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: inherit;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .heading {
+        height: 30px;
+        width: auto;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .heading > .customCheckbox-label > input{
+        display: none;
+    }
+
+    .heading > label{
+        display: inline-block;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+    }
+
+    body > div > div.heading > label > svg:hover{
+        width: 30px;
+        height: 30px;
+    }
+
+    .wrapper{
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+        background-color: rgba(255, 255, 255, 1.1);
+        border: 1px solid rgba(255, 255, 255, 0,30);
+        border-radius: 20px;
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 0,34);
+        color:rgb(186, 189, 179);
+        backdrop-filter: (4px);
+        -webkit-backdrop-filter: blur(4px);
+        background: rgba(255, 255, 255, 0.3);
+        flex-basis: 400px;
+        height: 630px;
+        padding: 20px 35px;
+    }
+
+    .result{
+       background: var(--bgcal);
+       border: 1px solid rgba(255, 255, 255, 0.05);
+       box-shadow: 0 4px 20px rgba(35, 35, 35, 0.4);
+       border-radius: 16px;
+       text-align: right;
+       padding: 20px;
+       color: var(--color-text);
+       overflow: auto;
+       height: 130px;
+       font-size: 29px;
+       width: 326px;
+       user-select: none;
+    }
+
+    .btnRow{
+       display: flex;
+       justify-content: space-between;
+       margin: 10% 0;
+    }
+
+    .btn{
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background: var(--bgcal);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--color-text);
+        border-radius: 10px;
+        font-family: inherit;
+        flex-basis: 20%;
+        font-size: 30px;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .btnRow > .btn:last-child{
+        backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       background: var(--bgcal);
+       border: 1px solid rgba(255, 255, 255, 0.05);
+       box-shadow: 0 4px 20px rgba(35, 35, 35, 0.4);
+       color: var(--color-text);
+       background: rgb(255, 77, 0);
+    }
+
+    .btn:hover{
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0,30);
+        color: var(--color-text-hover);
+    }
+
+    .btnRow > .btn:last-child:hover{
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0,30);
+        color: var(--color-text-hover);
+    }
+
+    .double{
+        flex-basis: 47%;
+    }
+
+    .triple{
+        flex-basis: 73%;
+    }
+}
